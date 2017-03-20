@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="teacher1" class="spring.inspect.bean.Teacher">
+        <property name="name" value="teacherName1"/>
+        <property name="age" value="49"/>
+        <property name="student" ref="student1"/>
+    </bean>
+    <bean id="student1" class="spring.inspect.bean.Student">
+        <property name="name" value="studentName1"/>
+        <property name="age" value="23"/>
+        <property name="teacher" ref="teacher1"/>
+    </bean>
+</beans>
